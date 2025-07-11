@@ -13,6 +13,7 @@
   overflow-x: hidden;
   padding: 2rem 1rem; /* Prevent content from touching edges */
   box-sizing: border-box;
+  z-index: 10000;
 }
 
 .splash-content {
@@ -616,6 +617,48 @@ body, html {
  .clock-column {
   gap: -1rem;              /* Vertical gap between clocks */
   }
+}
 
 
+
+.glass-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.glass-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.glass-navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.glass-navbar li a:hover {
+  color: #90e0ef;
+  transform: scale(1.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.scroll-offset {
+  padding-top: 80px; /* Adjust based on navbar height */
 }
