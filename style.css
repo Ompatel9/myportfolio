@@ -23,7 +23,7 @@
   width: 100%;
   max-width: 1000px;
   margin: auto;
-  
+  margin-top: -2rem;
   padding-bottom: 100px; /* To ensure button doesn't get cut off */
 }
 
@@ -39,9 +39,20 @@
   filter: brightness(0.7);
 }
 
+@media (max-width: 600px) {
+  .splash-content h1 {
+    margin-bottom: -2rem;
+  }
+
+  .clock-matrix {
+    margin-top: 0rem;
+  }
+}
+
+
 
 #enterBtn {
-  margin-top: -1rem;
+  margin-top: 0rem;
   padding: 0.80rem 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
