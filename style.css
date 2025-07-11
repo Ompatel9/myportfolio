@@ -47,6 +47,10 @@
   .clock-matrix {
     margin-top: 0rem;
   }
+    #enterBtn {
+    margin-top: -2rem;  /* or even 0rem if you want it really tight */
+  }
+
 }
 
 
