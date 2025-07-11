@@ -407,7 +407,8 @@ body, html {
 
   .splash-content h1 {
     font-size: 1.8rem;
-    margin-top: .5rem;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
   }
   .splash-content {
   font-size: 1.4rem;  /* ✅ This overrides the 2.5rem on small screens */
@@ -467,7 +468,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: -4rem;              /* Space between columns and cartoon */
+  gap: -5rem;              /* Space between columns and cartoon */
   flex-wrap: wrap;        /* Allows wrap on smaller screens */
   margin: 3rem 0;
 }
@@ -475,7 +476,7 @@ body, html {
 .clock-column {
   display: flex;
   flex-direction: column;
-  gap: 2rem;              /* Vertical gap between clocks */
+  gap: 4rem;              /* Vertical gap between clocks */
 }
 
 /* Central Cartoon Image */
@@ -560,7 +561,7 @@ body, html {
 
   .center-image {
     order: 2; /* Ensure it stays in center visually */
-    margin: 2rem 0 3rem 0; /* Top Right Bottom Left — adds space below */
+    margin: 0rem 0 0rem 0; /* Top Right Bottom Left — adds space below */
   }
   /* 👇 Scale down clocks on small screens */
 .glass-clock {
@@ -605,5 +606,14 @@ body, html {
   #enterBtn {
     margin-top: 0rem;
   }
+  .center-image {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  }
+  
+ .clock-column {
+  gap: -1rem;              /* Vertical gap between clocks */
+  }
+
 
 }
