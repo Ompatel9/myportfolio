@@ -406,7 +406,7 @@ body, html {
 
 
   .splash-content h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-top: 1rem;
     margin-bottom: -2rem;
   }
@@ -592,6 +592,7 @@ body, html {
   .splash-content h1 {
     margin-bottom: 0rem;
     margin-top: 0rem;
+    font-size: 0.5rem;
   }
   .splash-content {
     margin-bottom: 0rem;
