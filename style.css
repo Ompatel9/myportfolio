@@ -39,22 +39,6 @@
   filter: brightness(0.7);
 }
 
-@media (max-width: 600px) {
-  .splash-content h1 {
-    margin-bottom: -3rem;
-  }
-
-  .clock-matrix {
-    margin-top: 0rem;
-  }
-    #enterBtn {
-    margin-top: -4rem;  /* or even 0rem if you want it really tight */
-  }
-
-}
-
-
-
 #enterBtn {
   margin-top: -1rem;
   padding: 0.80rem 1.5rem;
@@ -490,6 +474,7 @@ body, html {
   gap: 0rem;              /* Space between columns and cartoon */
   flex-wrap: wrap;        /* Allows wrap on smaller screens */
   margin: 3rem 0;
+  
 }
 
 .clock-column {
@@ -602,5 +587,22 @@ body, html {
 .zone-label {
   font-size: 14px;
 }
+
+}
+
+
+@media (max-width: 600px) {
+  .splash-content h1 {
+    margin-bottom: -3rem;
+  }
+
+  .clock-matrix {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #enterBtn {
+    margin-top: -4rem;
+  }
 
 }
