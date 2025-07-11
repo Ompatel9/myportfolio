@@ -9,7 +9,7 @@
   align-items: start; /* Changed from center */
   justify-content: center;
   z-index: 9999;
-  overflow-y: hidden; /* Ensure vertical scroll works */
+  overflow-y: auto; /* Ensure vertical scroll works */
   overflow-x: hidden;
   padding: 2rem 1rem; /* Prevent content from touching edges */
   box-sizing: border-box;
