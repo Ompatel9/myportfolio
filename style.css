@@ -589,7 +589,7 @@ body, html {
 @media (max-width: 600px) { 
   .splash-content h1 {
     margin-bottom: 0rem;
-    margin-top: -5rem;
+    margin-top: -2.5rem;
   }
 
   .clock-matrix {
