@@ -23,8 +23,12 @@
   width: 100%;
   max-width: 1000px;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 0rem;
   padding-bottom: 100px; /* To ensure button doesn't get cut off */
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 /* Fullscreen background video */
@@ -57,14 +61,6 @@
   transform: scale(1.05);
 }
 
-/* Removed splash-content animation */
-.splash-content {
-  color: white;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  /* Removed animation: floatAndFade */
-}
 
 
 /* Removed unused animations */
@@ -471,10 +467,9 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0rem;              /* Space between columns and cartoon */
+  gap: -4rem;              /* Space between columns and cartoon */
   flex-wrap: wrap;        /* Allows wrap on smaller screens */
   margin: 3rem 0;
-  
 }
 
 .clock-column {
@@ -591,18 +586,20 @@ body, html {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 600px) { 
   .splash-content h1 {
-    margin-bottom: -3rem;
+    margin-bottom: 0rem;
+    margin-top: -5rem;
   }
 
   .clock-matrix {
     margin-top: 0rem;
     margin-bottom: 0.5rem;
+    gap: -4rem
   }
 
   #enterBtn {
-    margin-top: -4rem;
+    margin-top: 0rem;
   }
 
 }
