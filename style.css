@@ -593,7 +593,7 @@ body, html {
   .splash-content h1 {
     margin-bottom: 0rem;
     margin-top: 0rem;
-    font-size: 0.5rem;
+    font-size: 2rem;
   }
   .splash-content {
     margin-bottom: 0rem;
@@ -634,6 +634,8 @@ body, html {
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
+  overflow-x: auto;             /* 👈 Enables horizontal scroll */
+  white-space: nowrap;          /* 👈 Prevents wrapping */
 }
 
 .glass-navbar ul {
@@ -642,6 +644,12 @@ body, html {
   gap: 2rem;
   margin: 0;
   padding: 0;
+  overflow-x: auto;             /* 👈 Scrollable UL for mobile */
+}
+
+
+.glass-navbar li {
+  flex-shrink: 0;               /* 👈 Prevents shrinking */
 }
 
 .glass-navbar li a {
@@ -649,6 +657,7 @@ body, html {
   color: white;
   font-weight: 600;
   transition: color 0.3s, transform 0.3s;
+  white-space: nowrap;          /* 👈 Ensures no wrapping on small screens */
 }
 
 .glass-navbar li a:hover {
@@ -656,9 +665,27 @@ body, html {
   transform: scale(1.1);
 }
 
+/* Hides scrollbar for WebKit browsers (Chrome, Safari) */
+.glass-navbar::-webkit-scrollbar,
+.glass-navbar ul::-webkit-scrollbar {
+  display: none;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
 .scroll-offset {
   padding-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Hide vertical scrollbar - Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide vertical scrollbar - Firefox */
+body {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE and Edge */
 }
