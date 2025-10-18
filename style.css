@@ -147,9 +147,8 @@ body, html {
   padding: 1rem;
 }
 .skill-glass {
-  width: 110px;
-  height: 110px;
-  line-height: 110px;
+  width: 130px;                      /* a bit wider for long skills */
+  min-height: 110px;                 /* let height adjust slightly */
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -158,7 +157,13 @@ body, html {
   color: white;
   text-align: center;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  padding: 10px;                     /* ✅ adds breathing space */
+  display: flex;                     /* ✅ centers content neatly */
+  align-items: center;
+  justify-content: center;
+  white-space: normal;               /* ✅ allows multi-line text */
+  word-break: break-word;            /* ✅ breaks long words if needed */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -661,7 +666,7 @@ body, html {
 }
 
 .glass-navbar li a:hover {
-  color: #90e0ef;
+  color: #fa0580fb;
   transform: scale(1.1);
 }
 
