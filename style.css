@@ -1,21 +1,16 @@
 /* Splash screen container */
-#splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: start; /* Changed from center */
-  justify-content: center;
-  z-index: 9999;
-  overflow-y: hidden; /* Ensure vertical scroll works */
-  overflow-x: hidden;
-  padding: 2rem 1rem; /* Prevent content from touching edges */
-  box-sizing: border-box;
-  z-index: 10000;
-}
 
+#splash {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  overflow: visible;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
 .splash-content {
   display: flex;
   flex-direction: column;
@@ -44,7 +39,7 @@
   filter: brightness(0.7);
 }
 
-#enterBtn {
+/* #enterBtn {
   margin-top: -1rem;
   padding: 0.80rem 1.5rem;
   font-size: 1.2rem;
@@ -60,7 +55,7 @@
 #enterBtn:hover {
   background: rgba(51, 179, 226, 0.4);
   transform: scale(1.05);
-}
+} */
 
 
 
@@ -68,11 +63,7 @@
 @keyframes splashFadeIn { }
 @keyframes floatAndFade { }
 
-#splash.fade-out {
-  opacity: 0;
-  transform: scale(2.5);
-  transition: opacity 1s ease, transform 1.2s ease;
-}
+
 
 * {
   margin: 0;
@@ -384,13 +375,10 @@ body, html {
 }
 
 #mainContent {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-#mainContent.show {
   opacity: 1;
 }
+
+
 
 /* 📱 Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -423,11 +411,6 @@ body, html {
   margin-top: 4rem; /* Aligns from top */
 }
 
-
-  #enterBtn {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
 
   .profile-pic {
     width: 80px;
@@ -611,9 +594,7 @@ body, html {
     gap: -4rem
   }
 
-  #enterBtn {
-    margin-top: 0rem;
-  }
+  
   .center-image {
   margin-top: 0%;
   margin-bottom: 0%;
@@ -693,4 +674,46 @@ body::-webkit-scrollbar {
 body {
   scrollbar-width: none;        /* Firefox */
   -ms-overflow-style: none;     /* IE and Edge */
+}
+
+.tools-ribbon {
+  display: flex;
+  gap: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: max-content;
+  animation: scrollTools 40s linear infinite;
+}
+
+@keyframes scrollTools {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.tool-item {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.skill-category h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: aliceblue;
 }
