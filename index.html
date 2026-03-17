@@ -138,9 +138,27 @@ to visualize audience trends and channel performance.</p>
       <h4>Ai Agent</h4>
       <p>Built a real-time WhatsApp AI assistant using n8n, WhatsApp Business Cloud API, and Gemini/OpenAI, automating message processing via webhooks and generating AI responses through API integration.</p>
     </div>
-    <div class="project-glass">
-      <h4>Carousels</h4>
-      <p>Create research-based carousels on topics like carbon credits, leaders etc.</p>
+    <div class="project-glass carousel-box">
+      <h4>Content Decks</h4>
+
+<div class="decks-grid">
+
+  <div class="deck-card" data-pdf="decks/carboncredits.pdf">
+  <img src="thumbnails/carboncredits.png">
+  <p>Carbon Credits</p>
+</div>
+
+<div class="deck-card" data-pdf="decks/Flipkart founders.pdf">
+  <img src="thumbnails/Flipkart founders.png">
+  <p>Flipkart Founders</p>
+</div>
+
+<div class="deck-card" data-pdf="decks/PietroBeccari(LV).pdf">
+  <img src="thumbnails/PietroBeccari(LV).png">
+  <p>Louis Vuitton Case</p>
+</div>
+
+</div>
     </div>
   </div>
 </section>
@@ -375,6 +393,15 @@ to visualize audience trends and channel performance.</p>
 
 
   </div>
+  <div id="pdfModal" class="pdf-modal">
+  <div class="pdf-content">
+
+    <span class="close-btn" id="closeModal">&times;</span>
+
+    <iframe id="pdfViewer" src=""></iframe>
+
+  </div>
+</div>
 
   <!-- JavaScript -->
   <script src="script.js"></script>

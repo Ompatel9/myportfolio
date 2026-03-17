@@ -91,3 +91,20 @@ setInterval(() => {
 }, 1000);
 
 
+const modal = document.getElementById("pdfModal");
+const viewer = document.getElementById("pdfViewer");
+const closeBtn = document.getElementById("closeModal");
+
+document.querySelectorAll(".deck-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const pdfPath = card.getAttribute("data-pdf");
+
+    viewer.src = pdfPath + "#toolbar=0&navpanes=0&scrollbar=0";
+    modal.style.display = "block";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  viewer.src = "";
+});
