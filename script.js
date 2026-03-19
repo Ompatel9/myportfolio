@@ -108,3 +108,28 @@ closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
   viewer.src = "";
 });
+
+const face = document.querySelector(".face-image");
+
+document.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 20;
+  const y = (window.innerHeight / 2 - e.clientY) / 20;
+
+  face.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero-section");
+
+  window.addEventListener("scroll", () => {
+    let scrollY = window.scrollY;
+
+    let opacity = 1 - scrollY / (window.innerHeight * 0.7);
+    opacity = Math.max(opacity, 0);
+
+    hero.style.opacity = opacity;
+    hero.style.transform = `scale(${1 + (1 - opacity) * 0.08})`;
+    hero.style.filter = `blur(${(1 - opacity) * 4}px)`;
+  });
+});
