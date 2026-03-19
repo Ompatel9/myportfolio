@@ -27,35 +27,7 @@
   font-weight: 600;
 }
 
-/* Fullscreen background video */
-#splash video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(0.7);
-}
 
-/* #enterBtn {
-  margin-top: -1rem;
-  padding: 0.80rem 1.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid white;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-#enterBtn:hover {
-  background: rgba(51, 179, 226, 0.4);
-  transform: scale(1.05);
-} */
 
 
 
@@ -454,128 +426,119 @@ body, html {
 
 /* === Clock Section (Final Matrix Layout) === */
 
+/* === CLOCK SECTION (FINAL CLEAN VERSION) === */
+
+.clock-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: aliceblue;
+}
+
+.clock-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Layout */
 .clock-matrix {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: -5rem;              /* Space between columns and cartoon */
-  flex-wrap: wrap;        /* Allows wrap on smaller screens */
-  margin: 3rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
+/* Each column */
 .clock-column {
   display: flex;
   flex-direction: column;
-  gap: 4rem;              /* Vertical gap between clocks */
+  gap: 2rem;
 }
 
-/* Central Cartoon Image */
-.center-image {
-  width: 150px;
-  height: auto;
-  object-fit: contain;
-  max-width: 100%;
-}
-
-/* Clock Style */
+/* Clock box */
 .glass-clock {
-  width: 100%;
-  min-width: 280px;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  min-width: 260px;
+  max-width: 320px;
+  padding: 1rem 1.5rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Time Block Style */
+/* Time boxes */
 .time-box {
-  width: 70px;
-  height: 70px;
-  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
   font-weight: bold;
-  color: #281313;
+  color: #222;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
-/* Colon between hours:minutes:seconds */
+/* Colon */
 .colon {
-  font-size: 32px;
-  color: #000;
+  font-size: 26px;
   font-weight: bold;
-  margin: 0 4px;
+  color: #000;
 }
 
-/* Time Zone Label */
+/* Timezone label */
 .zone-label {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  color: #333;
-  line-height: 1;
+  margin-left: 6px;
 }
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
+
   .clock-matrix {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .clock-columns-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .clock-column {
     gap: 1.5rem;
   }
 
-  .center-image {
-    order: 2; /* Ensure it stays in center visually */
-    margin: 0rem 0 0rem 0; /* Top Right Bottom Left — adds space below */
+  .clock-column {
+    gap: 1.2rem;
   }
-  /* 👇 Scale down clocks on small screens */
-.glass-clock {
-  padding: 0.5rem 1rem;
-  min-width: 220px;
-  max-width: 300px;
-}
 
-.time-box {
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-}
+  .glass-clock {
+    min-width: 220px;
+    max-width: 260px;
+    padding: 0.6rem 1rem;
+  }
 
-.colon {
-  font-size: 24px;
-}
+  .time-box {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
 
-.zone-label {
-  font-size: 14px;
-}
+  .colon {
+    font-size: 20px;
+  }
 
+  .zone-label {
+    font-size: 12px;
+  }
 }
-
 
 @media (max-width: 600px) { 
   .splash-content h1 {
