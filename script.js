@@ -133,3 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
     hero.style.filter = `blur(${(1 - opacity) * 4}px)`;
   });
 });
+
+// Optional: slight delay so points appear after line draws
+window.addEventListener("load", () => {
+  const points = document.querySelectorAll(".point");
+  points.forEach((p, i) => {
+    p.style.opacity = 0;
+    setTimeout(() => {
+      p.style.transition = "0.5s";
+      p.style.opacity = 1;
+    }, 500 + i * 200);
+  });
+});
