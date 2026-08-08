@@ -99,8 +99,14 @@ document.querySelectorAll(".deck-card").forEach(card => {
   card.addEventListener("click", () => {
     const pdfPath = card.getAttribute("data-pdf");
 
-    viewer.src = pdfPath + "#toolbar=0&navpanes=0&scrollbar=0";
-    modal.style.display = "block";
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile) {
+      window.open(pdfPath, "_blank");   // 📱 open in new tab
+    } else {
+      viewer.src = pdfPath + "#view=FitH"; // 💻 better fit
+      modal.style.display = "block";
+    }
   });
 });
 
